@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="display-4" i18n>User Management</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, veniam!</p>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 search-container">
+      <input type="text" placeholder="search" class="search-input" (keyup)="search(searchVal)" [(ngModel)]="searchVal">
+      <button type="button" class="btn btn-success big" (click)="addNewCustomer(null)" i18n>Add New Customer</button>
+      <button type="button" class="btn btn-success small" (click)="addNewCustomer(null)"><i class="fa fa-plus" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 table-container">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" i18n>Name</th>
+          <th scope="col" i18n>Email</th>
+          <th scope="col" i18n>Telephone</th>
+          <th scope="col" i18n>Created Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let customer of filteredCustomers" class="customer-container">
+          <p *ngIf="filteredCustomers.length < 1">Nothing to show yet</p>
+              <th scope="row">
+                  <a href="#"  (click)="deleteModal(customer)"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                  <a href="#" (click)="edit(customer)" *ngIf="!editStart"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                  <a href="#" (click)="save()" *ngIf="customer.id === isEdit && editStart"><i class="fa fa-floppy-o" aria-hidden="true"></i></a>
+                </th>
+                <td><input class="edit-input" type="text" *ngIf="customer.id === isEdit" [value]="selectedCustomer?.name" [(ngModel)]="selectedCustomer.name">{{customer?.id !== isEdit ? customer?.name : null}}</td>
+                <td><input class="edit-input" type="text" *ngIf="customer.id === isEdit" [value]="selectedCustomer?.email" [(ngModel)]="selectedCustomer.email">{{customer?.id !== isEdit ? customer?.email : null}}</td>
+                <td><input class="edit-input" type="text" *ngIf="customer.id === isEdit" [value]="selectedCustomer?.tel" [(ngModel)]="selectedCustomer.tel">{{customer?.id !== isEdit ? customer?.tel : null}}</td>
+                <td>{{customer?.date}}</td>
+
+          <!-- <ng-container #editState>
+            <th scope="row">
+              <a href="#"  (click)="delete(customer)"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+              <a href="#" (click)="save()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+            </th>
+            <td><input type="text" value="{{customer?.name}}"></td>
+            <td><input type="text" value="{{customer?.email}}"></td>
+            <td><input type="text" value="{{customer?.tel}}"></td>
+            <td><input type="text" value="{{customer?.date}}"></td>
+          </ng-container> -->
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr>
+  <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item" *ngFor="let button of getButtonCount(); let i = index" [ngClass]="{active: i === currentPage}">
+          <a class="page-link" href="#" (click)="selectPage(i)">{{i + 1}}</a>
+        </li>
+      </ul>
+    </nav>
+</div>
+
+<app-modal-add *ngIf="addCustomer" [ngClass]="{show: addCustomer}" (onModalClose)="addNewCustomer($event)"></app-modal-add>
+<app-modal-delete *ngIf="deleteShow" [ngClass]="{show: deleteShow}" (onModalClose)="deleteModal($event)" (deleteCustomer)="delete($event)" [customer]="selectedCustomer"></app-modal-delete>

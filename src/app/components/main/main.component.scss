@@ -1,0 +1,90 @@
+@import 'src/app/mixins.scss';
+
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+
+  .search-input{
+    width: 600px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid $black;
+    padding-left: 10px;
+      @include breakpoint(phablet) {
+        width: 300px;
+      }
+
+      @include breakpoint(mobile) {
+        width: 300px;
+      }
+  }
+}
+
+.edit-input {
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid $black;
+  padding-left: 10px;
+}
+
+.customer-container {
+  cursor: pointer;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.table-container {
+  text-align: center;
+  overflow: auto;
+  font-size: 16px;
+
+    @include breakpoint(tablet) {
+      font-size: 14px;
+    }
+    @include breakpoint(phablet) {
+      font-size: 11px;
+    }
+    @include breakpoint(mobile) {
+      font-size: 9px;
+    }
+}
+
+.show {
+  display: block;
+}
+
+.small {
+  display: none;
+  border-radius: 50%;
+    @include breakpoint(tablet) {
+      display: block;
+    }
+
+    @include breakpoint(phablet) {
+      display: block;
+    }
+
+    @include breakpoint(mobile) {
+      display: block;
+    }
+}
+
+.big {
+  display: block;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+
+  @include breakpoint(phablet) {
+    display: none;
+  }
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}

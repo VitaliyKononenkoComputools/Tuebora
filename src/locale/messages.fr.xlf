@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="8fa6fab366f9a3f77b983de0295a4aee3738ea07" datatype="html">
+        <source>Select you language</source>
+        <target>Choisissez votre langue</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/header/header.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6ad31729632818476420bb0f698d617436263675" datatype="html">
+        <source>User Management</source>
+        <target>Gestion des utilisateurs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/main/main.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="556d4bd297dce9973930fbc1ae399092661b8039" datatype="html">
+        <source>Add New Customer</source>
+        <target>Ajouter un nouveau client</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/main/main.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
+        <source>Name</source>
+        <target>prénom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/main/main.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modal-add/modal-add.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/main/main.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f4753d99682179b036b9704d4c3b758103e25db2" datatype="html">
+        <source>Telephone</source>
+        <target>Téléphone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/main/main.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modal-add/modal-add.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="472f2890e75d2f37dbe1da8bb859594b5e22a933" datatype="html">
+        <source>Created Date</source>
+        <target>Date de création</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/main/main.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="69b6ac577a19acc39fc0c22342092f327fff2529" datatype="html">
+        <source>Email address</source>
+        <target>Adresse e-mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modal-add/modal-add.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f4e529ae5ffd73001d1ff4bbdeeb0a72e342e5c8" datatype="html">
+        <source>Close</source>
+        <target>Fermer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modal-add/modal-add.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modal-delete/modal-delete.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5b3075e8dc3f3921ec316b0bd83b6d14a06c1a4f" datatype="html">
+        <source>Save changes</source>
+        <target>Sauvegarder les modifications</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modal-add/modal-add.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5283652fee31d12d084e887047b894ee8646b73d" datatype="html">
+        <source>Are you sure you want to delete </source>
+        <target>Etes-vous sûr que vous voulez supprimer </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modal-delete/modal-delete.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="70ef158c584bafe788e319a0bffa11b02ee9abf1" datatype="html">
+        <source>delete</source>
+        <target>effacer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modal-delete/modal-delete.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

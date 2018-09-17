@@ -1,0 +1,18 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Customer001",
+      "email": "customer001@email.com",
+      "tel": "0526252525",
+      "date": "9/14/2018"
+    },
+    {
+      "id": 2,
+      "name": "Customer002",
+      "email": "customer002@email.com",
+      "tel": "0526252525",
+      "date": "9/14/2018"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+//VARIABLES
+
+$black: #000;
+$white: #fff;
+
+
+//BREAKPOINTS
+
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media screen and (min-width: 980px) { @content ; }
+    }
+    @else if $point == laptop {
+      @media(min-width: 64em) { @content ; }
+    }
+    @else if $point == tablet {
+      @media screen  and (max-width: 979px) { @content ; }
+    }
+    @else if $point == phablet {
+      @media screen and (max-width: 500px) { @content ; }
+    }
+    @else if $point == mobile {
+      @media screen and (max-width: 500px) { @content ; }
+    }
+}
