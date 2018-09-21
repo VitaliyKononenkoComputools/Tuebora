@@ -1,6 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-12 header-container">
+        <div class="menu" (click)="showMenu()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="openedMenu" *ngIf="menu">
+          <ul class="list-group">
+            <li class="list-group-item disabled">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+        </div>
       <app-header></app-header>
     </div>
   </div>

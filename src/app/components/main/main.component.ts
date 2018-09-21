@@ -1,6 +1,8 @@
 import { CustomersModel } from './../../models/customers.model';
 import {Component} from '@angular/core';
 import {UserService} from '../../services/user.service';
+import {MatSnackBar} from '@angular/material';
+
 
 @Component({
   selector: 'app-main',
@@ -9,7 +11,7 @@ import {UserService} from '../../services/user.service';
 })
 export class MainComponent {
 
-  constructor(private _userService: UserService) {
+  constructor(private _userService: UserService, public snackBar: MatSnackBar) {
     this.getCustomers();
   }
 
@@ -39,9 +41,9 @@ export class MainComponent {
   sortCustomers(): void {
     this.customers = this.customers.sort( (a, b ): any => {
       if (a.date > b.date) {
-        return 1;
-      } else if (a.date < b.date) {
         return -1;
+      } else if (a.date < b.date) {
+        return 1;
       }
     });
   }
@@ -66,6 +68,7 @@ export class MainComponent {
       this.filteredCustomers.push(customer);
       this.customers = this.filteredCustomers;
       this.customersAll = this.filteredCustomers.length;
+      this.snackBar.open('Adding successful', 'Close', {duration: 3000});
     }
     this.getCustomers();
   }
@@ -76,6 +79,7 @@ export class MainComponent {
   }
 
   delete(customer: CustomersModel): void {
+    this.snackBar.open('Deleting successful', 'Close', {duration: 3000});
     this.filteredCustomers.splice(this.filteredCustomers.indexOf(customer), 1);
     this.customers = this.filteredCustomers;
     this._userService.deleteCustomer(customer.id).subscribe(res => this.getCustomers());
@@ -95,6 +99,7 @@ export class MainComponent {
         res.name = this.selectedCustomer.name;
         res.email = this.selectedCustomer.email;
         res.tel = this.selectedCustomer.tel;
+        this.snackBar.open('Editing successful', 'Close', {duration: 3000});
       }
     });
     this._userService.saveEditedCustomer(this.selectedCustomer).subscribe(res => res);

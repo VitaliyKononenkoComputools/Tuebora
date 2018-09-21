@@ -10,6 +10,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {ModalAddComponent} from './components/modal-add/modal-add.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ModalDeleteComponent} from './components/modal-delete/modal-delete.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {ModalDeleteComponent} from './components/modal-delete/modal-delete.compo
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
   providers: [UserService, { provide: LOCALE_ID, useValue: 'en' }],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@
 
 $black: #000;
 $white: #fff;
+$grey:  #dee2e6;
 
 
 //BREAKPOINTS
@@ -20,6 +21,6 @@ $white: #fff;
       @media screen and (max-width: 500px) { @content ; }
     }
     @else if $point == mobile {
-      @media screen and (max-width: 500px) { @content ; }
+      @media screen and (max-width: 400px) { @content ; }
     }
 }

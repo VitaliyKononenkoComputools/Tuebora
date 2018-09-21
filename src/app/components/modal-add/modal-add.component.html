@@ -42,7 +42,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="closeModal()" i18n>Close</button>
-        <button type="button" class="btn btn-primary" (click)="addCustomer()" i18n>Save changes</button>
+        <button type="button" class="btn btn-primary" (click)="addCustomer()" i18n [disabled]="addCustomerForm.invalid">Save changes</button>
       </div>
     </div>
   </div>
